@@ -8,40 +8,17 @@ if type nvim > /dev/null 2>&1; then
   export EDITOR="nvim"
 fi
 
-# gnu
-case ${OSTYPE} in
-  darwin*)
-    alias rm="rm -i"
-    if [[ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/coreutils/libexec/gnubin $path)
-      # aliases
-      alias ls="ls --classify --color=auto"
-      alias ll="ls -lh"
-      alias la="ls -a"
-    fi
-    if [[ -d $(brew --prefix)/opt/grep/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/grep/libexec/gnubin $path)
-      # aliases
-      alias grep="grep --color=auto"
-    fi
-    if [[ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/findutils/libexec/gnubin $path)
-    fi
-    ;;
-  linux*)
-    # aliases
-    alias l="ls -G"
-    alias la="ls -aG"
-    alias grep="grep --color=auto"
-    alias rm="rm -i"
-    alias c="clear"
-    alias e="nvim"
-    alias ..="cd .."
-    alias ...="cd ../.."
-    alias ....="cd ../../.."
-    alias .....="cd ../../../.."
-    ;;
-esac
+# alias
+alias l="ls -G"
+alias la="ls -aG"
+alias grep="grep --color=auto"
+alias rm="rm -i"
+alias c="clear"
+alias e="nvim"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # build
 ## pkg-config
