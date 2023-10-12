@@ -151,6 +151,6 @@ if type R > /dev/null 2>&1; then
 fi
 
 # for work
-if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
-  source ${XDG_CONFIG_HOME}/zsh/work.sh
+if [[ -e ${XDG_CONFIG_HOME}/zsh/work.zsh ]]; then
+  source ${XDG_CONFIG_HOME}/zsh/work.zsh
 fi
