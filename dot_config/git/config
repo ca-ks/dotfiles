@@ -2,7 +2,7 @@
 	email = deep.bolt2mann.machine@gmail.com
 	name = kwhtsng
 [push]
-	default = nothing
+	default = current
 [pull]
 	rebase = false
 [alias]
