@@ -1,6 +1,9 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 return {
+	color_scheme = "Catppuccin Mocha",
+
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
@@ -23,5 +26,31 @@ return {
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
 
-	color_scheme = "Catppuccin Mocha",
+	disable_default_key_bindings = true,
+
+	leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1000 },
+	keys = {
+		{
+			key = "c",
+			mods = "LEADER",
+			action = act.SpawnCommandInNewTab,
+		},
+		{
+			key = "x",
+			mods = "LEADER",
+			action = act.CloseCurrentTab({
+				confirm = true,
+			}),
+		},
+		{
+			key = "n",
+			mods = "LEADER",
+			action = act.ActivateTabRelative(1),
+		},
+		{
+			key = "p",
+			mods = "LEADER",
+			action = act.ActivateTabRelative(-1),
+		},
+	},
 }
