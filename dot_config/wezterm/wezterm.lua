@@ -32,6 +32,16 @@ return {
 	keys = {
 		{
 			key = "c",
+			mods = "CMD",
+			action = act.CopyTo("Clipboard"),
+		},
+		{
+			key = "v",
+			mods = "CMD",
+			action = act.PasteFrom("Clipboard"),
+		},
+		{
+			key = "c",
 			mods = "LEADER",
 			action = act.SpawnCommandInNewTab,
 		},

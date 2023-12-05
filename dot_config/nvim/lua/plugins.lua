@@ -75,6 +75,7 @@ return {
 		end,
 	},
 	---- copilot
+	--
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",

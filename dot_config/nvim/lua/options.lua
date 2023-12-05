@@ -86,7 +86,3 @@ local diagnostic_signs = {
 for _, sign in ipairs(diagnostic_signs) do
 	vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
 end
-
--- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
