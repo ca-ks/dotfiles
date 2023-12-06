@@ -68,9 +68,9 @@ autocmd({ "FileType" }, {
 		vim.opt_local.expandtab = true
 	end,
 })
----- json, toml
+---- json, yaml, toml
 autocmd({ "FileType" }, {
-	pattern = { "json", "toml" },
+	pattern = { "json", "yaml", "yml", "toml" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
@@ -78,18 +78,6 @@ autocmd({ "FileType" }, {
 		vim.opt_local.expandtab = true
 	end,
 })
----- yaml
--- autocmd({ "FileType" }, {
--- 	pattern = { "yaml", "yml" },
--- 	callback = function()
--- 		vim.opt_local.tabstop = 2
--- 		vim.opt_local.shiftwidth = 2
--- 		vim.opt_local.softtabstop = 2
--- 		vim.opt_local.expandtab = true
--- 		vim.opt_local.autoindent = false
--- 		vim.opt_local.smartindent = false
--- 	end,
--- })
 
 -- ターミナルモード
 ---- 常にインサートモードで開く
