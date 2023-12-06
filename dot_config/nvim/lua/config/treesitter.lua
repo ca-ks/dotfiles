@@ -21,8 +21,8 @@ require("nvim-treesitter.configs").setup({
 		disable = {},
 	},
 	indent = {
-		-- enable = true,
-		disable = {},
+		enable = true,
+		disable = { "yaml" },
 	},
 	rainbow = {
 		enable = true,
