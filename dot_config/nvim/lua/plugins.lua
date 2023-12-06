@@ -10,14 +10,14 @@ return {
 	},
 
 	-- tree-sitter
-	-- {
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	build = ":TSUpdate",
-	-- 	config = function()
-	-- 		require("config/treesitter")
-	-- 	end,
-	-- },
-	---- sticky header
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("config/treesitter")
+		end,
+	},
+	-- sticky header
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
@@ -36,7 +36,7 @@ return {
 			require("config/lsp")
 		end,
 	},
-	---- lspsaga
+	-- lspsaga
 	{
 		"nvimdev/lspsaga.nvim",
 		config = function()
@@ -47,7 +47,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-	---- show lsp context
+	-- show lsp context
 	{ "SmiteshP/nvim-navic" },
 
 	-- format on save
@@ -74,7 +74,7 @@ return {
 			require("config/cmp")
 		end,
 	},
-	---- copilot
+	-- copilot
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
