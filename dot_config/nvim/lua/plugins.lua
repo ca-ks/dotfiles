@@ -123,16 +123,16 @@ return {
 	},
 
 	-- telescopes
-	{
-		"nvim-telescope/telescope.nvim",
-		version = "0.1.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("config/telescope")
-		end,
-	},
+	-- {
+	-- 	"nvim-telescope/telescope.nvim",
+	-- 	version = "0.1.x",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("config/telescope")
+	-- 	end,
+	-- },
 	---- filebrowser
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
@@ -179,7 +179,7 @@ return {
 	},
 
 	-- emphasis indent
-	-- { "lukas-reineke/indent-blankline.nvim" },
+	{ "lukas-reineke/indent-blankline.nvim" },
 
 	-- comment
 	{
