@@ -9,14 +9,14 @@ return {
 		end,
 	},
 
-	-- -- tree-sitter
-	-- {
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	build = ":TSUpdate",
-	-- 	config = function()
-	-- 		require("config/treesitter")
-	-- 	end,
-	-- },
+	-- tree-sitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("config/treesitter")
+		end,
+	},
 	-- ---- sticky header
 	-- {
 	-- 	"nvim-treesitter/nvim-treesitter-context",
