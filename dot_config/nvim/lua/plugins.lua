@@ -25,91 +25,91 @@ return {
 		end,
 	},
 
--- 	-- lsp
--- 	{
--- 		"williamboman/mason.nvim",
--- 		dependencies = {
--- 			"neovim/nvim-lspconfig",
--- 			"williamboman/mason-lspconfig.nvim",
--- 		},
--- 		config = function()
--- 			require("config/lsp")
--- 		end,
--- 	},
--- 	---- lspsaga
--- 	{
--- 		"nvimdev/lspsaga.nvim",
--- 		config = function()
--- 			require("config/lspsaga")
--- 		end,
--- 		dependencies = {
--- 			"nvim-treesitter/nvim-treesitter",
--- 			"nvim-tree/nvim-web-devicons",
--- 		},
--- 	},
--- 	---- show lsp context
--- 	{ "SmiteshP/nvim-navic" },
---
--- 	-- format on save
--- 	{
--- 		"elentok/format-on-save.nvim",
--- 		config = function()
--- 			require("config/format-on-save")
--- 		end,
--- 	},
-
-	-- completion
+	-- lsp
 	{
-		"hrsh7th/nvim-cmp",
+		"williamboman/mason.nvim",
 		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-vsnip",
-			"hrsh7th/vim-vsnip",
-			"hrsh7th/vim-vsnip-integ",
+			"neovim/nvim-lspconfig",
+			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
-			require("config/cmp")
+			require("config/lsp")
 		end,
 	},
-	---- copilot
+	---- lspsaga
 	{
-		"zbirenbaum/copilot.lua",
-		event = "VeryLazy",
+		"nvimdev/lspsaga.nvim",
 		config = function()
-			require("copilot").setup({
-				panel = {
-					enabled = false,
-				},
-				suggestion = {
-					enabled = true,
-					auto_trigger = true,
-					debounce = 100,
-					keymap = {
-						accept = "<TAB>",
-						accept_word = false,
-						accept_line = false,
-						next = "<M-]>",
-						prev = "<M-[>",
-						dismiss = "<C-]>",
-					},
-				},
-				filetypes = {
-					cvs = false,
-					gitcommit = false,
-					gitrebase = false,
-					help = false,
-					hgcommit = false,
-					markdown = true,
-					svn = false,
-					yaml = true,
-					["."] = false,
-				},
-			})
+			require("config/lspsaga")
+		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+	},
+	---- show lsp context
+	{ "SmiteshP/nvim-navic" },
+
+	-- format on save
+	{
+		"elentok/format-on-save.nvim",
+		config = function()
+			require("config/format-on-save")
 		end,
 	},
+
+	-- -- completion
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = {
+	-- 		"hrsh7th/cmp-buffer",
+	-- 		"hrsh7th/cmp-nvim-lsp",
+	-- 		"hrsh7th/cmp-nvim-lua",
+	-- 		"hrsh7th/cmp-path",
+	-- 		"hrsh7th/cmp-vsnip",
+	-- 		"hrsh7th/vim-vsnip",
+	-- 		"hrsh7th/vim-vsnip-integ",
+	-- 	},
+	-- 	config = function()
+	-- 		require("config/cmp")
+	-- 	end,
+	-- },
+	-- ---- copilot
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("copilot").setup({
+	-- 			panel = {
+	-- 				enabled = false,
+	-- 			},
+	-- 			suggestion = {
+	-- 				enabled = true,
+	-- 				auto_trigger = true,
+	-- 				debounce = 100,
+	-- 				keymap = {
+	-- 					accept = "<TAB>",
+	-- 					accept_word = false,
+	-- 					accept_line = false,
+	-- 					next = "<M-]>",
+	-- 					prev = "<M-[>",
+	-- 					dismiss = "<C-]>",
+	-- 				},
+	-- 			},
+	-- 			filetypes = {
+	-- 				cvs = false,
+	-- 				gitcommit = false,
+	-- 				gitrebase = false,
+	-- 				help = false,
+	-- 				hgcommit = false,
+	-- 				markdown = true,
+	-- 				svn = false,
+	-- 				yaml = true,
+	-- 				["."] = false,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- dap
 	{
