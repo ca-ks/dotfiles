@@ -1,30 +1,30 @@
 return {
--- 	-- colorscheme
--- 	{
--- 		"catppuccin/nvim",
--- 		priority = 1000,
--- 		config = function()
--- 			vim.cmd("colorscheme catppuccin")
--- 			vim.cmd("highlight WinSeparator guifg=#424362")
--- 		end,
--- 	},
---
--- 	-- tree-sitter
--- 	{
--- 		"nvim-treesitter/nvim-treesitter",
--- 		build = ":TSUpdate",
--- 		config = function()
--- 			require("config/treesitter")
--- 		end,
--- 	},
--- 	---- sticky header
--- 	{
--- 		"nvim-treesitter/nvim-treesitter-context",
--- 		config = function()
--- 			require("treesitter-context").setup({})
--- 		end,
--- 	},
---
+	-- colorscheme
+	{
+		"catppuccin/nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme catppuccin")
+			vim.cmd("highlight WinSeparator guifg=#424362")
+		end,
+	},
+
+	-- tree-sitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("config/treesitter")
+		end,
+	},
+	---- sticky header
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context").setup({})
+		end,
+	},
+
 -- 	-- lsp
 -- 	{
 -- 		"williamboman/mason.nvim",
@@ -57,129 +57,129 @@ return {
 -- 			require("config/format-on-save")
 -- 		end,
 -- 	},
---
--- 	-- completion
--- 	{
--- 		"hrsh7th/nvim-cmp",
--- 		dependencies = {
--- 			"hrsh7th/cmp-buffer",
--- 			"hrsh7th/cmp-nvim-lsp",
--- 			"hrsh7th/cmp-nvim-lua",
--- 			"hrsh7th/cmp-path",
--- 			"hrsh7th/cmp-vsnip",
--- 			"hrsh7th/vim-vsnip",
--- 			"hrsh7th/vim-vsnip-integ",
--- 		},
--- 		config = function()
--- 			require("config/cmp")
--- 		end,
--- 	},
--- 	---- copilot
--- 	{
--- 		"zbirenbaum/copilot.lua",
--- 		event = "VeryLazy",
--- 		config = function()
--- 			require("copilot").setup({
--- 				panel = {
--- 					enabled = false,
--- 				},
--- 				suggestion = {
--- 					enabled = true,
--- 					auto_trigger = true,
--- 					debounce = 100,
--- 					keymap = {
--- 						accept = "<TAB>",
--- 						accept_word = false,
--- 						accept_line = false,
--- 						next = "<M-]>",
--- 						prev = "<M-[>",
--- 						dismiss = "<C-]>",
--- 					},
--- 				},
--- 				filetypes = {
--- 					cvs = false,
--- 					gitcommit = false,
--- 					gitrebase = false,
--- 					help = false,
--- 					hgcommit = false,
--- 					markdown = true,
--- 					svn = false,
--- 					yaml = true,
--- 					["."] = false,
--- 				},
--- 			})
--- 		end,
--- 	},
---
--- 	-- dap
--- 	{
--- 		"mfussenegger/nvim-dap",
--- 		config = function()
--- 			require("config/dap")
--- 		end,
--- 		dependencies = {
--- 			"rcarriga/nvim-dap-ui",
--- 		},
--- 	},
---
--- 	-- telescopes
--- 	{
--- 		"nvim-telescope/telescope.nvim",
--- 		version = "0.1.x",
--- 		dependencies = {
--- 			"nvim-lua/plenary.nvim",
--- 		},
--- 		config = function()
--- 			require("config/telescope")
--- 		end,
--- 	},
--- 	---- filebrowser
--- 	{
--- 		"nvim-telescope/telescope-file-browser.nvim",
--- 		dependencies = {
--- 			"nvim-telescope/telescope.nvim",
--- 		},
--- 	},
---
--- 	-- completely replaces the UI for messages, cmdline and the popupmenu
--- 	{
--- 		"folke/noice.nvim",
--- 		dependencies = {
--- 			"MunifTanjim/nui.nvim",
--- 			"rcarriga/nvim-notify",
--- 		},
--- 		config = function()
--- 			require("notify").setup({ timeout = 100, top_down = true })
--- 			require("config/noice")
--- 		end,
--- 	},
---
--- 	-- highlight undo
--- 	{
--- 		"tzachar/highlight-undo.nvim",
--- 		config = function()
--- 			require("highlight-undo").setup()
--- 		end,
--- 	},
---
--- 	-- status line
--- 	{
--- 		"hoob3rt/lualine.nvim",
--- 		config = function()
--- 			require("config/lualine")
--- 		end,
--- 	},
---
--- 	-- bufferline
--- 	{
--- 		"akinsho/nvim-bufferline.lua",
--- 		config = function()
--- 			require("config/bufferline")
--- 		end,
--- 	},
---
--- 	-- emphasis indent
--- 	{ "lukas-reineke/indent-blankline.nvim" },
+
+	-- completion
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-nvim-lua",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/vim-vsnip-integ",
+		},
+		config = function()
+			require("config/cmp")
+		end,
+	},
+	---- copilot
+	{
+		"zbirenbaum/copilot.lua",
+		event = "VeryLazy",
+		config = function()
+			require("copilot").setup({
+				panel = {
+					enabled = false,
+				},
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					debounce = 100,
+					keymap = {
+						accept = "<TAB>",
+						accept_word = false,
+						accept_line = false,
+						next = "<M-]>",
+						prev = "<M-[>",
+						dismiss = "<C-]>",
+					},
+				},
+				filetypes = {
+					cvs = false,
+					gitcommit = false,
+					gitrebase = false,
+					help = false,
+					hgcommit = false,
+					markdown = true,
+					svn = false,
+					yaml = true,
+					["."] = false,
+				},
+			})
+		end,
+	},
+
+	-- dap
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("config/dap")
+		end,
+		dependencies = {
+			"rcarriga/nvim-dap-ui",
+		},
+	},
+
+	-- telescopes
+	{
+		"nvim-telescope/telescope.nvim",
+		version = "0.1.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("config/telescope")
+		end,
+	},
+	---- filebrowser
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+	},
+
+	-- completely replaces the UI for messages, cmdline and the popupmenu
+	{
+		"folke/noice.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+		config = function()
+			require("notify").setup({ timeout = 100, top_down = true })
+			require("config/noice")
+		end,
+	},
+
+	-- highlight undo
+	{
+		"tzachar/highlight-undo.nvim",
+		config = function()
+			require("highlight-undo").setup()
+		end,
+	},
+
+	-- status line
+	{
+		"hoob3rt/lualine.nvim",
+		config = function()
+			require("config/lualine")
+		end,
+	},
+
+	-- bufferline
+	{
+		"akinsho/nvim-bufferline.lua",
+		config = function()
+			require("config/bufferline")
+		end,
+	},
+
+	-- emphasis indent
+	{ "lukas-reineke/indent-blankline.nvim" },
 
 	-- comment
 	{
